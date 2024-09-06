@@ -18,22 +18,19 @@
       align-items: center;
       height: 100vh;
       background-color: #f2f2f2;
+      margin: 0;
     }
 
     .pass-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
       width: 100%;
-      height: 100%;
-    }
-
-    .pass-card {
-      width: 90%;
       max-width: 400px;
       background-color: white;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .pass-card {
       padding: 20px;
       text-align: center;
       position: relative;
@@ -42,6 +39,7 @@
     .header {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       margin-bottom: 10px;
     }
 
@@ -71,18 +69,25 @@
     .details {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 15px;
+      font-size: 14px;
+      margin-bottom: 10px;
     }
 
     .detail {
-      font-size: 14px;
+      width: 33%;
       text-align: center;
     }
 
     .times {
-      font-size: 14px;
-      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
       margin-bottom: 15px;
+    }
+
+    .time {
+      width: 50%;
+      text-align: center;
     }
 
     .pass-code {
@@ -90,9 +95,12 @@
       margin-bottom: 15px;
     }
 
-    .logo img {
-      width: 100px;
+    .logo {
       margin-bottom: 15px;
+    }
+
+    .logo img {
+      width: 80px;
     }
 
     .one-day-pass-button {
