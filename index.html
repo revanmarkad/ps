@@ -3,45 +3,44 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the content is responsive -->
     <title>PMPML Pass</title>
     <link rel="icon" href="https://play-lh.googleusercontent.com/lFSZVZeLbHkZN9Iz7kGqJ0aVEEy_AaZYPAX9lyomfZvNCARgoihUKm4oV6z4mlAl_hTV">
     <style>
+        /* Basic styling for mobile optimization */
         body {
-            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
-            align-items: flex-start;
-            height: 100vh;
-            overflow-y: auto; /* Allows scrolling */
+            align-items: center;
+            background-color: #f0f0f0;
+            min-height: 100vh; /* Ensures content takes up full height */
         }
 
+        /* Main container optimized for mobile screens */
         .mobile-display {
-            width: 100%; /* Updated to 100% width */
-            max-width: 400px; /* Set a max-width for larger screens */
+            width: 100%;
+            max-width: 400px; /* Limits width on larger screens */
             background-color: #f0f0f0;
-            border: 1px solid #ccc;
             display: flex;
             justify-content: center;
             align-items: center;
-            position: relative;
-            margin: 0 auto; /* Center on screen */
+            padding: 10px; /* Adds padding for better readability */
         }
 
+        /* Content container with rounded corners and shadows */
         .contain {
-            width: 100%; /* Updated to full width */
-            max-width: 350px; /* Set a maximum width */
-            height: auto;
-            border-radius: 15px;
+            width: 100%;
             background-color: #fff;
-            padding: 0;
+            border-radius: 15px;
             border: 1px solid rgb(220, 220, 220);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* Prevents overflow issues */
         }
 
+        /* Top navigation styling */
         .main {
             display: flex;
             justify-content: space-between;
@@ -49,40 +48,13 @@
             padding: 10px;
         }
 
-        .all {
-            text-decoration: underline;
-            font-size: 14px;
-            margin-left: auto;
-        }
-
-        .crossimg {
-            height: 20px;
-            margin-right: auto;
-        }
-
+        /* Styling for headers */
         .red-top,
         .red-bottom {
             background-color: rgb(201, 16, 16);
             color: #fff;
             text-align: center;
-            padding: 10px 0;
-            margin: 0;
-            width: 100%;
-        }
-
-        .red-top {
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-        }
-
-        .red-bottom {
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-        }
-
-        .pune {
-            font-size: 18px;
-            margin: 0;
+            padding: 10px;
         }
 
         .textcontain {
@@ -96,32 +68,16 @@
             margin-bottom: 8px;
         }
 
-        .passt {
-            font-size: 11px;
-            color: gray;
-            margin-bottom: 2px;
-        }
-
-        .hirizontal-line {
-            border-top: 1px solid rgb(207, 207, 207);
-            margin: 10px 0;
-        }
-
-        .booktime {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 8px;
-        }
-
+        .passt,
         .ttt {
-            font-size: 10px;
+            font-size: 12px;
             color: gray;
         }
 
         .number {
             font-size: 14px;
             font-weight: bold;
-            margin-top: 8px;
+            margin: 8px 0;
             text-align: center;
         }
 
@@ -135,23 +91,7 @@
             animation: zoomInOut 1.5s ease-in-out infinite;
         }
 
-        @keyframes zoomInOut {
-            0%,
-            100% {
-                transform: scale(0.8);
-            }
-
-            50% {
-                transform: scale(1.2);
-            }
-        }
-
-        .onedayname {
-            margin-top: 8px;
-            color: #fff;
-            font-weight: bold;
-        }
-
+        /* Floating button */
         .cus {
             position: fixed;
             bottom: 20px;
@@ -169,60 +109,83 @@
         .cus img {
             height: 20px;
         }
+
+        @keyframes zoomInOut {
+            0%,
+            100% {
+                transform: scale(0.8);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="mobile-display">
         <div class="contain">
+            <!-- Header section -->
             <div class="main">
-                <img class="crossimg" src="https://img.icons8.com/ios-filled/50/000000/multiply.png" alt="Close">
-                <h6 class="all">All passes</h6>
+                <img class="crossimg" src="https://img.icons8.com/ios-filled/50/000000/multiply.png" alt="Close" style="height: 20px; cursor: pointer;">
+                <h6 class="all" style="margin: 0; font-size: 14px; text-decoration: underline;">All passes</h6>
             </div>
 
+            <!-- Red header section -->
             <div class="red-top">
-                <p class="pune"><strong>Pune Mahanagar Parivahan <br> Mahamandal Ltd</strong></p>
+                <p style="margin: 0; font-size: 18px;"><strong>Pune Mahanagar Parivahan<br>Mahamandal Ltd</strong></p>
             </div>
 
+            <!-- Content container -->
             <div class="textcontain">
+                <!-- Pass details -->
                 <div class="pif">
                     <div class="passtype">
                         <p class="passt">Pass Type</p>
-                        <b><strong>Only PMC</strong></b>
+                        <b>Only PMC</b>
                     </div>
                     <div class="id">
                         <p class="passt">ID</p>
-                        <b><strong>5292</strong></b>
+                        <b>5292</b>
                     </div>
                     <div class="rs">
                         <p class="passt">Fare</p>
-                        <b><strong>₹40</strong></b>
+                        <b>₹40</b>
                     </div>
                 </div>
-                <div class="hirizontal-line"></div>
+                <hr>
+
+                <!-- Booking details -->
                 <div class="booktime">
-                    <div class="time">
+                    <div>
                         <p class="ttt">Booking Time</p>
-                        <b><strong>04 Sep, 24 | 10:17 AM</strong></b>
+                        <b>04 Sep, 24 | 10:17 AM</b>
                     </div>
-                    <div class="valid">
+                    <div>
                         <p class="ttt">Validity Time</p>
-                        <b><strong>04 Sep, 24 | 11:59 PM</strong></b>
+                        <b>04 Sep, 24 | 11:59 PM</b>
                     </div>
                 </div>
+
+                <!-- Pass number -->
                 <div class="number">2409041017RO7H90</div>
-                <div class="hirizontal-line"></div>
+                <hr>
+
+                <!-- Logo -->
                 <div class="logoo">
                     <img src="https://play-lh.googleusercontent.com/lFSZVZeLbHkZN9Iz7kGqJ0aVEEy_AaZYPAX9lyomfZvNCARgoihUKm4oV6z4mlAl_hTV" alt="PMPML Logo">
                 </div>
             </div>
 
+            <!-- Footer section -->
             <div class="red-bottom">
-                <p class="onedayname">One Day Pass</p>
+                <p style="margin: 0; font-size: 16px;">One Day Pass</p>
             </div>
         </div>
     </div>
 
+    <!-- Floating action button -->
     <div class="cus">
         <img src="https://img.icons8.com/material-outlined/24/000000/user.png" alt="User">
     </div>
