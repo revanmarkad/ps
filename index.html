@@ -14,23 +14,26 @@
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             height: 100vh;
+            overflow-y: auto; /* Allows scrolling */
         }
 
         .mobile-display {
-            width: 291px; /* Matches your mobile width */
-            height: 623px; /* Matches your mobile height */
-            background-color: #f0f0f0; /* Example background color */
-            border: 1px solid #ccc; /* Optional border */
+            width: 100%; /* Updated to 100% width */
+            max-width: 400px; /* Set a max-width for larger screens */
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
+            margin: 0 auto; /* Center on screen */
         }
 
         .contain {
-            width: 90%;
+            width: 100%; /* Updated to full width */
+            max-width: 350px; /* Set a maximum width */
             height: auto;
             border-radius: 15px;
             background-color: #fff;
