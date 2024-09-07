@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -29,7 +29,6 @@
             .crossimg {
                 height: 20px;
                 margin: 0 0 0 -87%;
-
             }
 
             .contain {
@@ -42,7 +41,6 @@
             }
 
             .mainname {
-
                 height: 13px;
             }
 
@@ -59,6 +57,31 @@
                 height: 525px;
                 width: 443px;
                 margin-top: 10px;
+                position: relative; /* Added for pseudo-elements */
+            }
+
+            /* Add the half circles using pseudo-elements */
+            .textcontain::before,
+            .textcontain::after {
+                content: '';
+                position: absolute;
+                width: 20px; /* Half the width of the circle */
+                height: 40px; /* Full height of the circle */
+                background-color: #fff;
+                border: 1px solid #ddd;
+                border-radius: 50%;
+            }
+
+            .textcontain::before {
+                top: 50%;
+                left: -10px; /* Adjust to align with your design */
+                transform: translateY(-50%);
+            }
+
+            .textcontain::after {
+                top: 50%;
+                right: -10px; /* Adjust to align with your design */
+                transform: translateY(-50%);
             }
 
             .pif {
@@ -76,7 +99,6 @@
                 font-size: 13px;
                 color: gray;
                 margin-left: 8px;
-
             }
 
             .pmc {
@@ -102,7 +124,6 @@
 
             .booktime {
                 display: flex;
-                 
                 height: 80px;
                 margin-top: 20px;
             }
@@ -155,9 +176,10 @@
                 text-align: center;
                 color: #fff;
                 font-family: Arial, Helvetica, sans-serif;
-                 font-size: 21;
+                font-size: 21;
             }
-            .cus{
+
+            .cus {
                 height: 55px;
                 background-color: rgb(255, 255, 255);
                 border-radius: 100px;
@@ -165,14 +187,14 @@
                 margin: 105px 0 0 82.5%;
                 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             }
-            .cus img{
+
+            .cus img {
                 height: 20px;
                 position: relative;
                 justify-items: center;
                 align-items: center;
                 margin: 17px 0 0 17px;
             }
-
         }
     </style>
 </head>
@@ -224,7 +246,7 @@
         </div>
     </div>
     <div class="cus">
-      <img src="https://e7.pngegg.com/pngimages/654/738/png-clipart-computer-icons-name-icon-black-desktop-wallpaper.png">
+        <img src="https://e7.pngegg.com/pngimages/654/738/png-clipart-computer-icons-name-icon-black-desktop-wallpaper.png">
     </div>
 </body>
 
