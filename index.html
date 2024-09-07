@@ -57,31 +57,8 @@
                 height: 525px;
                 width: 443px;
                 margin-top: 10px;
-                position: relative; /* Added for pseudo-elements */
-            }
-
-            /* Add the half circles using pseudo-elements */
-            .textcontain::before,
-            .textcontain::after {
-                content: '';
-                position: absolute;
-                width: 20px; /* Half the width of the circle */
-                height: 40px; /* Full height of the circle */
-                background-color: #fff;
-                border: 1px solid #ddd;
-                border-radius: 50%;
-            }
-
-            .textcontain::before {
-                top: 50%;
-                left: -10px; /* Adjust to align with your design */
-                transform: translateY(-50%);
-            }
-
-            .textcontain::after {
-                top: 50%;
-                right: -10px; /* Adjust to align with your design */
-                transform: translateY(-50%);
+                position: relative;
+                overflow: hidden;
             }
 
             .pif {
@@ -118,8 +95,35 @@
 
             .hirizontal-line {
                 margin-top: 10px;
-                color: rgb(207, 207, 207);
                 width: 100%;
+                position: relative;
+                border-top: 1px dashed rgb(207, 207, 207);
+            }
+
+            .hirizontal-line::before,
+            .hirizontal-line::after {
+                content: '';
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                border: 1px solid rgb(207, 207, 207);
+                border-radius: 50%;
+                background-color: white;
+                top: -10px;
+            }
+
+            .hirizontal-line::before {
+                left: -10px;
+            }
+
+            .hirizontal-line::after {
+                right: -10px;
+            }
+
+            /* Remove half circles from the second horizontal line */
+            .hirizontal-line.second::before,
+            .hirizontal-line.second::after {
+                content: none;
             }
 
             .booktime {
@@ -160,7 +164,6 @@
             }
 
             @keyframes zoomInOut {
-
                 0%,
                 100% {
                     transform: scale(0.8);
@@ -176,7 +179,7 @@
                 text-align: center;
                 color: #fff;
                 font-family: Arial, Helvetica, sans-serif;
-                font-size: 21;
+                font-size: 21px;
             }
 
             .cus {
@@ -223,7 +226,7 @@
                         <b class="pmc"><strong>₹40</strong></b>
                     </div>
                 </div>
-                <div class="hirizontal-line">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</div>
+                <div class="hirizontal-line"></div> <!-- First horizontal line -->
                 <div class="booktime">
                     <div class="time">
                         <p class="ttt">Booking Time</p>
@@ -235,7 +238,8 @@
                     </div>
                 </div>
                 <div class="number">5309040913RB2E3I</div>
-                <div class="hirizontal-line">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</div>
+                <div class="hirizontal-line second"></div> <!-- Second horizontal line with new class -->
+                
                 <div class="logoo">
                     <img src="https://play-lh.googleusercontent.com/lFSZVZeLbHkZN9Iz7kGqJ0aVEEy_AaZYPAX9lyomfZvNCARgoihUKm4oV6z4mlAl_hTV" alt="image">
                 </div>
