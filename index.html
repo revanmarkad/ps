@@ -21,24 +21,25 @@
 
             .all {
                 text-decoration: underline;
-                font-size: 18px;
+                font-size: 12px; /* Decreased the font size */
                 font-family: Arial, Helvetica, sans-serif;
-                margin: 0 0 0 75%;
+                margin: 0 0 0 80%; /* Adjusted for alignment */
+                font-weight: normal; /* Removed bold */
             }
 
             .crossimg {
-                height: 20px;
-                margin: 0 0 0 -87%;
+                height: 15px; /* Decreased the size */
+                margin: 0 0 0 -85%; /* Adjusted for alignment */
             }
 
             .contain {
-                height: 660px;
+                height: 550px; /* Decreased the height */
                 width: 90%;
                 margin: 125px 25px 30px 20px;
                 border-radius: 15px;
                 background-color: rgb(230, 25, 25);
                 display: flex;
-                position: relative; /* Added to position the One Day Pass text */
+                position: relative;
             }
 
             .mainname {
@@ -53,9 +54,17 @@
                 text-align: center;
             }
 
+            .marathi {
+                color: #fff;
+                font-size: 20px; /* Marathi line in a smaller font */
+                font-family: system-ui, sans-serif;
+                text-align: center;
+                margin-top: 5px;
+            }
+
             .textcontain {
                 background-color: #fff;
-                height: 525px;
+                height: 475px; /* Adjusted to fit smaller container */
                 width: 443px;
                 margin-top: 10px;
                 position: relative;
@@ -121,7 +130,6 @@
                 right: -10px;
             }
 
-            /* Remove half circles from the second horizontal line */
             .hirizontal-line.second::before,
             .hirizontal-line.second::after {
                 content: none;
@@ -162,9 +170,9 @@
             }
 
             .logoo img {
-                height: 150px;
-                margin: 67px 0 0 160px;
-                animation: zoomInOut 1.5s ease-in-out infinite;
+                height: 120px; /* Reduced height */
+                margin: 50px 0 0 160px;
+                animation: zoomInOut 3s ease-in-out infinite; /* Slowed down animation */
             }
 
             @keyframes zoomInOut {
@@ -174,18 +182,18 @@
                 }
 
                 50% {
-                    transform: scale(1.6);
+                    transform: scale(1.3); /* Reduced zoom */
                 }
             }
 
             .onedayname {
-                position: absolute; /* Positioning it in the center of the bottom line */
-                bottom: 0; /* Align to the bottom of the container */
-                left: 50%; /* Center horizontally */
-                transform: translateX(-50%); /* Correct centering */
-                background-color: rgb(230, 25, 25); /* Match the red background */
-                padding: 5px 10px; /* Add padding for better appearance */
-                color: #fff; /* White text */
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: rgb(230, 25, 25);
+                padding: 5px 10px;
+                color: #fff;
                 font-family: Arial, Helvetica, sans-serif;
                 font-size: 21px;
             }
@@ -217,8 +225,8 @@
     </div>
     <div class="contain">
         <div class="mainname">
-            <p class="pune"><strong>Pune Mahanagar Parivahan <br> Mahamandal Ltd</strong></p>
-
+            
+            <p class="marathi"><strong>पुणे महानगर परिवहन महामंडळ लि.</strong></p> <!-- Added Marathi line -->
             <div class="textcontain">
                 <div class="pif">
                     <div class="passtype">
@@ -238,22 +246,21 @@
                 <div class="booktime">
                     <div class="time">
                         <p class="ttt">Booking Time</p>
-                        <b class="sss"><strong>30 Sep,24 | 07:03 AM</strong></b>
+                        <b class="sss"><strong>01 Oct, 24 | 06:12 AM</strong></b>
                     </div>
                     <div class="valid">
                         <p class="ttt">Validity Time</p>
-                        <b class="sss"><strong>30 Sep,24 | 11:59 PM</strong></b>
+                        <b class="sss"><strong>01 Oct, 24 | 11:59 PM</strong></b>
                     </div>
                 </div>
-                <div class="number">5309040913RB2E3I</div>
+                <div class="number">2410010612MIT8HS</div>
                 <div class="hirizontal-line second"></div>
-                
                 <div class="logoo">
                     <img src="https://play-lh.googleusercontent.com/lFSZVZeLbHkZN9Iz7kGqJ0aVEEy_AaZYPAX9lyomfZvNCARgoihUKm4oV6z4mlAl_hTV" alt="image">
                 </div>
             </div>
         </div>
-        <div class="onedayname">One Day Pass</div> <!-- Positioned text -->
+        <div class="onedayname">One Day Pass</div>
     </div>
     <div class="cus">
         <img src="https://e7.pngegg.com/pngimages/654/738/png-clipart-computer-icons-name-icon-black-desktop-wallpaper.png">
