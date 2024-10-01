@@ -21,42 +21,37 @@
 
             .all {
                 text-decoration: underline;
-                font-size: 12px; /* Decreased the font size */
+                font-size: 12px;
                 font-family: Arial, Helvetica, sans-serif;
-                margin: 0 0 0 80%; /* Adjusted for alignment */
-                font-weight: normal; /* Removed bold */
+                margin: 0 0 0 80%;
+                font-weight: normal;
             }
 
             .crossimg {
-                height: 15px; /* Decreased the size */
-                margin: 0 0 0 -85%; /* Adjusted for alignment */
+                height: 15px;
+                margin: 0 0 0 -85%;
             }
 
             .contain {
-                height: 550px; /* Decreased the height */
+                height: 7.3cm; /* Changed height to 7.3 cm */
                 width: 90%;
-                margin: 120px 25px 30px 20px;
+                margin: 20px auto; /* Adjusted margins */
                 border-radius: 15px;
                 background-color: rgb(207, 46, 46);
                 display: flex;
                 position: relative;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
             }
 
             .mainname {
-                height: 13px;
-            }
-
-            .pune {
-                color: #fff;
-                font-size: 23px;
-                padding: -10px;
-                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                text-align: center;
+                height: 20px;
             }
 
             .marathi {
                 color: #fff;
-                font-size: 22px; /* Marathi line in a smaller font */
+                font-size: 22px;
                 font-family: system-ui, sans-serif;
                 text-align: center;
                 margin-top: 4px;
@@ -64,9 +59,9 @@
 
             .textcontain {
                 background-color: #fff;
-                height: 475px; /* Adjusted to fit smaller container */
+                height: calc(7.3cm - 50px); /* Adjusted to fit within the 7.3 cm pass */
                 width: 443px;
-                margin-top: 0px;
+                margin-top: 4px;
                 position: relative;
                 overflow: hidden;
             }
@@ -141,7 +136,8 @@
                 margin-top: 20px;
             }
 
-            .time, .valid {
+            .time,
+            .valid {
                 width: 50%;
                 display: flex;
                 flex-direction: column;
@@ -170,9 +166,9 @@
             }
 
             .logoo img {
-                height: 120px; /* Reduced height */
+                height: 120px;
                 margin: 50px 0 0 160px;
-                animation: zoomInOut 3s ease-in-out infinite; /* Slowed down animation */
+                animation: zoomInOut 3s ease-in-out infinite;
             }
 
             @keyframes zoomInOut {
@@ -182,7 +178,7 @@
                 }
 
                 50% {
-                    transform: scale(1.3); /* Reduced zoom */
+                    transform: scale(1.3);
                 }
             }
 
@@ -225,8 +221,7 @@
     </div>
     <div class="contain">
         <div class="mainname">
-            
-            <p class="marathi">पुणे महानगर परिवहन महामंडळ लि.</p> <!-- Added Marathi line -->
+            <p class="marathi">पुणे महानगर परिवहन महामंडळ लि.</p>
             <div class="textcontain">
                 <div class="pif">
                     <div class="passtype">
